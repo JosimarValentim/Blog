@@ -1,18 +1,18 @@
 package br.aeso.blog;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Blog {
 	private String data;
 	private Usuario dono;
 	private String titulo;
-	private List<Conteudo> ListaConteudo;
+	private ArrayList<Conteudo> listaConteudo;
 	
-	public Blog(String data, Usuario dono, String titulo, List<Conteudo> ListaConteudo){
+	public Blog(String data, Usuario dono, String titulo, ArrayList<Conteudo> listaConteudo){
 		this.data = data;
 		this.dono = dono;
 		this.titulo = titulo;
-		this.ListaConteudo = ListaConteudo;
+		this.listaConteudo = listaConteudo;
 	}
 	
 	public String getData(){
@@ -34,14 +34,14 @@ public class Blog {
 		this.titulo = titulo;
 	}
 
-	public List<Conteudo> getListaConteudo() {
-		return ListaConteudo;
+	public ArrayList<Conteudo> getListaConteudo() {
+		return listaConteudo;
 	}
-	public void setListaConteudo(List<Conteudo> listaConteudo) {
-		ListaConteudo = listaConteudo;
+	public void setListaConteudo(ArrayList<Conteudo> listaConteudo) {
+		this.listaConteudo = listaConteudo;
 	}
 	public String toString() {
-		return "Blog [data=" + data + ", dono=" + dono + ", titulo=" + titulo + ", ListaConteudo=" + ListaConteudo
+		return "Blog [data=" + data + ", dono=" + dono + ", titulo=" + titulo + ", ListaConteudo=" + listaConteudo
 				+ "]";
 	}
 	
