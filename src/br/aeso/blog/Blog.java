@@ -6,43 +6,53 @@ public class Blog {
 	private String data;
 	private Usuario dono;
 	private String titulo;
-	private ArrayList<Conteudo> listaConteudo;
+	private ArrayList<Conteudo> conteudo;
 	
-	public Blog(String data, Usuario dono, String titulo, ArrayList<Conteudo> listaConteudo){
+	public Blog(String data, Usuario dono, String titulo){
 		this.data = data;
 		this.dono = dono;
 		this.titulo = titulo;
-		this.listaConteudo = listaConteudo;
+		conteudo = new ArrayList<>();
 	}
 	
 	public String getData(){
 		return data;
 	}
+	
 	public void setData(String data){
 		this.data = data;
 	}
+	
 	public Usuario getDono(){
 		return dono;
 	}
+	
 	public void setDono(Usuario dono){
 		this.dono = dono;
 	}
+	
 	public String getTitulo(){
 		return titulo;
 	}
+	
 	public void setTitulo(String titulo){
 		this.titulo = titulo;
 	}
-
-	public ArrayList<Conteudo> getListaConteudo() {
-		return listaConteudo;
+	
+	public ArrayList<Conteudo> conteudo() {
+		return conteudo;
 	}
-	public void setListaConteudo(ArrayList<Conteudo> listaConteudo) {
-		this.listaConteudo = listaConteudo;
+	
+	public void inserirConteudo(Conteudo conteudo)	 {
+		this.conteudo.add(conteudo);
 	}
+	
+	public void removerConteudo(Conteudo conteudo){
+		this.conteudo.remove(conteudo);
+	}
+	
 	public String toString() {
-		return "Blog [data=" + data + ", dono=" + dono + ", titulo=" + titulo + ", ListaConteudo=" + listaConteudo
-				+ "]";
+		return "Blog [data=" + data + ", dono=" + dono + ", titulo=" + titulo + "]";
 	}
 	
 

@@ -1,25 +1,24 @@
 package br.aeso.blog;
 
-import java.util.List;
+import java.util.ArrayList;
 
-public class Nota extends Comentario {
+public class Nota extends Conteudo {
 	
-	private List<Comentario> listaComentario;
+	private ArrayList<Comentario> comentario;
 	
-	public Nota(List<Comentario> listaComentario){
-		this.listaComentario = listaComentario; 
+	public Nota(String data, String texto, Usuario autor){
+		super(data, texto, autor);
+		comentario = new ArrayList<>();
 	}
 	
-	public List<Comentario> getListaComentario(){
-		return listaComentario;
+	private void inserirComentario(Comentario comentario){
+		this.comentario.add(comentario);
 	}
-	public void setListaComentario(List<Comentario> listaComentario){
-		this.listaComentario = listaComentario;
+	private void removerComentario(Comentario comentario){
+		this.comentario.add(comentario);
 	}
-	
-	public String toString(){
-		return " Nota [listaComentario=" + listaComentario + "]";
+	private ArrayList<Comentario> listaComentario(){
+		return comentario;
 	}
-	
 
 }
