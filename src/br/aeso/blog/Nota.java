@@ -15,7 +15,7 @@ public class Nota extends Conteudo {
 		this.comentario.add(comentario);
 	}
 	private void removerComentario(Comentario comentario){
-		this.comentario.add(comentario);
+		this.comentario.remove(comentario);
 	}
 	private ArrayList<Comentario> listaComentario(){
 		return comentario;
